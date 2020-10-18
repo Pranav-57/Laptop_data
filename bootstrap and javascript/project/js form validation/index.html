@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9970e863a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Java Script </title>
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Registration Form</h1>
+        </div>
+        <form class="form" autocomplete="off">
+            <div class="form_control" id="form">
+                <label for="username">User Name</label>
+                <input type="text" id="username" placeholder="Enter Your Username">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small id="small_un">error msg</small>
+            </div>
+            <div class="form_control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter Your Email">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form_control">
+                <label for="mobile">Mobile Number</label>
+                <input type="mobile" id="mobile" placeholder="Enter Your Mobile Number">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form_control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Your Password">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <div class="form_control">
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" id="cpassword" placeholder="Enter Your Password Again">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error msg</small>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+
+        var username = document.getElementById("username");
+        var email = document.getElementById("email");
+        var form = document.getElementById("form");
+        var small_un = document.getElementById("small_un");
+
+        username.addEventListener('keyup', () => {
+            console.log(username.value);
+            let regx = /[\w\s]/
+            if(regx.test(username.value)){
+                if(username.value != ''){
+                     small_un.innerText = "Valid Username";
+                    form.classList.add("success");
+                    form.classList.remove("error");
+                }
+            }else{
+                form.classList.add("error");
+                form.classList.remove("success");
+                if(username.value == ''){
+                    small_un.innerText = "Username cannot be blank";
+                }
+            }
+        });
+
+
+    </script>
+</body>
+</html>

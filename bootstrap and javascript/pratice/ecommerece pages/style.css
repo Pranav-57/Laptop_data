@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box!important;
+}
+.filter{
+    background-color: red;
+    width: 100%;
+}
+.card{
+    border: none;
+}
+.card-body{
+    width: 95%;
+}
+.card_img{
+    border: 1px solid black;
+    width: 90%;
+}
+.card-title{
+    font-weight: 400;
+}
+.buttons{
+    padding: 4px 10px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    /* margin-right: 1px; */
+    margin-top: 10px;
+    display: inline-block;
+    transition: 1s;
+}
+.buttons:hover{
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}

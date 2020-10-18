@@ -1,0 +1,109 @@
+html,body{
+    margin: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ------------ Global class --------------------- */
+
+:root{
+    --text-grey:grey;
+}
+
+a{
+    text-decoration: none;
+    color: var(--text-grey);
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+ul{
+    list-style-type: none;
+}
+
+/* ----*------- Global class -------*------------- */
+
+/* ----------navbar--------------- */
+
+.nav{
+    background: white;
+    padding: 0 2rem;
+    height: 0px;
+    min-height: 10vh;
+    overflow: hidden;
+}
+
+.nav .nav-menu{
+    justify-content: space-between;
+}
+
+.nav .nav-items{
+    display: flex;
+    margin: 0%;
+}
+
+.nav .toggle-collapse{
+    position: absolute;
+    top: 0%;
+    width: 90%;
+    cursor: pointer;
+}
+
+.nav .toggle-collapse .toggle-icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0rem;
+}
+
+.nav .toggle-collapse .toggle-icons i{
+    color: var(--text-grey);
+}
+
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.nav .nav-items .nav-link:hover{
+    background-color: chartreuse;
+}
+
+.nav .nav-items .nav-link:hover a{
+    color: white;
+}
+
+.nav-brand a{
+    font-size: 1.6rem;
+    padding: 1rem 0;
+    display: block;
+}
+.nav .social{
+    padding: 1.4rem 0rem;
+}
+
+.nav .social i{
+    padding: 0 0.2rem;
+}
+.nav .social i:hover{
+    color: orange;
+}
+/* ----*-----navbar-----------*--- */
+
+
+/*            view port less than or equal to 750px               */
+
+@media only screen and (max-width:750px){
+    .nav .nav-menu, .nav .nav-items{
+        flex-direction: column;
+    }
+    .nav .toggle-collapse{
+        display: initial;
+    }
+}
+
+
+/*    *       view port less than or equal to 750px       *       */

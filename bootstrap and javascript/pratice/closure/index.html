@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function outerfunc(){
+            j = "outer variable";
+            document.write(j + "<br>")
+            function innerfunc(){
+                k = "inner variable";
+                document.write(k + "<br>")
+                document.write(j + "<br>")
+            }
+            document.write(k + "<br>")
+            innerfunc()
+        }
+        outerfunc()
+        innerfunc()
+    </script>
+</body>
+</html>

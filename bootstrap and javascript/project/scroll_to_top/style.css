@@ -1,0 +1,64 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+section{
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.section1{
+    background: chartreuse;
+}
+.section2{
+    background: red;
+}
+.section3{
+    background: purple;
+}
+.section4{
+    background: orange;
+}
+.top{
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    right: 3%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+    pointer-events: none;
+    transition: all 1s;
+    opacity: 0;
+}
+.ative{
+    pointer-events: auto;
+    opacity: 1;
+    bottom: 5%;
+}
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(36,0,0);
+    background: radial-gradient(circle, rgba(36,0,0,1) 0%, rgba(255,0,0,1) 0%, rgba(255,205,0,1) 100%);
+    border-radius: 5px;
+    border: 2.3px solid white;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+    border-radius: 5px;
+    margin: 10px;
+}

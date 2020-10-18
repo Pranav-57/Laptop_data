@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container .row img{
+    width: 100%;
+}
+.product_price{
+    font-size: 20px;
+}

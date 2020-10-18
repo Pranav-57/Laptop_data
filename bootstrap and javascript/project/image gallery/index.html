@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <img src="model.jpg" class="img1" onclick="imgclick(this)" alt="" srcset="" style="width: 200px; height: 200px;">
+    <img src="bootstrap.PNG" class="img1" onclick="imgclick(this)" alt="" srcset="" style="width: 200px; height: 200px;">
+    <img src="Capture.PNG" class="img1" onclick="imgclick(this)" alt="" srcset="" style="width: 200px; height: 200px;">
+
+    <img src="programmer-4523101_1280.jpg" id="image" alt="" srcset="" style="width: 200px; height: 200px;">
+    
+    <!-- <script src="index.js"></script> -->
+    <script>
+        const images = document.getElementById('image');
+        // const img1 = document.querySelectorAll('.img1');
+        
+        function imgclick(th){
+            images.src = th.src
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.nav_brand{
+    font-size: 2rem;
+    margin-left: 6rem;
+    cursor: pointer;
+}
+.navbar .nav_items{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .nav_items ul{
+    display: flex;
+}
+.navbar .nav_items li{
+    list-style: none;
+    padding: 10px;
+    position: relative;
+}
+.navbar .nav_items a{
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+    font-size: 18px;
+    position: relative;
+}
+.navbar .nav_items .sub-class-1{
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    display: none;
+}
+.navbar .nav_items .sub-class-1 ul{
+    display: flex;
+    flex-direction: column;
+}
+.navbar .nav_items ul li:hover .sub-class-1{
+    display: block;
+    position: absolute;
+    background: white;
+    top: 35px;
+    left: 0;
+}
+.navbar .nav_items ul li:hover .sub-class-1 ul li{
+    padding: 7px 13px;
+}
+.navbar .nav_items ul li:hover .sub-class-1 ul li a{
+    color: black;
+}
+.navbar .nav_items ul li:hover .sub-class-1 ul li:hover{
+    background-color: rgb(199, 199, 199);
+    color: white;
+}
+.navbar .nav_items .sub-class-2{
+    display: none;
+    position: relative;
+}
+.sub-class-1 ul li:hover .sub-class-2{
+    display: block;
+    position: absolute;
+    left: 140px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 10px 0;
+    top: 5px;
+    background-color: white;
+}
+.navbar>.nav_items>ul>li>a::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0px;
+    height: 2px;
+    bottom: -8px;
+    left: 50%;
+    transition: 1s ease;
+}
+.navbar .nav_items a:hover::after{
+    width: 80%;
+    left: 10%;
+}
+.navbar .nav_items .form{
+    margin-right: 50px;
+}
+.navbar .nav_items .form input[ type = 'text']{
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: black;
+    padding: 3px 10px;
+    color: white;
+    outline: none;
+}
+.navbar .nav_items .form input[ type = 'submit']{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 25px;
+    margin: 7px 20px;
+    transition: 1s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+.navbar .nav_items .form input[ type = 'submit']:hover{
+    background-color: white;
+    color: black;
+}
+.navbar .nav_items .form input[ type = 'submit']:focus{
+    outline: none;
+}
+.navbar .toggle{
+    position: absolute;
+    right: 3rem;
+    top: 18px;
+    display: none;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40px;
+    height: 20px;
+}
+.navbar .toggle .bar{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+}
+@media (max-width:1024px){
+    .navbar .toggle{
+        display: flex;
+    }
+    .navbar .nav_items{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+    }
+    .nav_brand{
+        margin-left: 3rem;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar .nav_items ul{ 
+        flex-direction: column;
+    }
+    .navbar .nav_items .form{
+        margin: 20px 10px;
+    }
+    .navbar .nav_items .form input{
+        margin: 10px;
+    }
+    .nav_items.active{
+        display: flex;
+    }
+    .navbar .nav_items ul li:hover .sub-class-1{
+        left: 100px;
+        top: 0px;
+    }
+    .sub-class-1 ul li:hover .sub-class-2{
+        left: 115px;
+    }
+    .navbar .nav_items ul li:hover .sub-class-1 ul li{
+        padding: 7px 0px;
+    }
+}
